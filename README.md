@@ -1,53 +1,61 @@
 # christyvp.security
 
 Personal site for Christy VanderPloeg, Independent Security Consultant.
+Live at: christyvpsecurity.com
 
 ## Files
 
-```
-christyvp-site/
+christyvpsecurity-site/
 ├── index.html        ← main page (edit content here)
 ├── css/style.css     ← all styles (always dark)
 ├── js/main.js        ← mobile menu + smooth scroll
 └── images/
     └── christy.jpg   ← ADD YOUR PHOTO HERE
-```
 
 ## How to edit content
 
-1. Go to your GitHub repo
-2. Click `index.html`
+1. Go to the GitHub repo
+2. Click index.html
 3. Click the ✏️ pencil icon (top right)
-4. Find the section you want — look for comments like `<!-- TESTIMONIALS -->`, `<!-- PROJECTS -->`
+4. Find the section to update — look for comments like TESTIMONIALS, PROJECTS
 5. Edit the text
-6. Click **Commit changes**
+6. Click Commit changes
 
-Cloudflare auto-deploys in ~30 seconds.
+GitHub Pages auto-deploys in ~30 seconds.
 
-## Add your photo
+## Add a photo
 
-Upload your headshot to the `images/` folder named `christy.jpg`.
+Upload a headshot to the images/ folder named christy.jpg.
 Portrait ratio (taller than wide) looks best in the circle frame.
-The site shows "CV" initials as a fallback until you add it.
+The site shows "CV" initials as a fallback until a photo is added.
 
-## Update your LinkedIn URL
+## Update the LinkedIn URL
 
-In `index.html`, find `https://linkedin.com` and replace with your actual LinkedIn profile URL.
+In index.html, find https://linkedin.com and replace with the actual LinkedIn profile URL.
 
-## Deploy to Cloudflare Pages
+## Hosting — GitHub Pages
 
-1. Push this folder to a **private** GitHub repo (e.g. `christyvp-site`)
-2. Go to dash.cloudflare.com → Workers & Pages → Create → Pages
-3. Connect GitHub → select your repo
-4. Leave all build settings blank (plain HTML, no build step needed)
-5. Click Deploy
+1. Go to the repo on GitHub
+2. Settings → Pages
+3. Source → Deploy from branch → select main → / (root) → Save
+4. GitHub gives a temporary URL: christyvp.github.io/christyvpsecurity-site
 
-## Connect your domain
+## Connect the custom domain (Squarespace)
 
-- If bought through Cloudflare: Pages → Custom Domains → Add → `christyvpsecurity.com` (auto-connects)
-- If at Squarespace/Google Domains: update nameservers there to point to Cloudflare
+1. In GitHub Pages settings, add custom domain: christyvpsecurity.com → Save
+2. Log into Squarespace → Domains → christyvpsecurity.com → DNS Settings
+3. Add these 4 A records:
+   - Name: @ / Value: 185.199.108.153
+   - Name: @ / Value: 185.199.109.153
+   - Name: @ / Value: 185.199.110.153
+   - Name: @ / Value: 185.199.111.153
+4. Add 1 CNAME record:
+   - Name: www / Value: christyvp.github.io
+5. Back in GitHub Pages → check Enforce HTTPS
 
-## Contact info already set
+Takes 10-30 minutes to go live.
+
+## Contact info
 
 - Email: christy@christyvpsecurity.com
 - Booking: https://calendar.app.google/y3G7U5zF6wvPr6P68
